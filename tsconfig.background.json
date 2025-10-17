@@ -1,0 +1,10 @@
+{
+  "extends": "./.typescript/base.json",
+  "compilerOptions": {
+    "noEmit": true,
+    "lib": ["DOM", "ESNext"],
+    "moduleResolution": "bundler",
+    "types": ["webextension-polyfill"]
+  },
+  "include": ["src/background/index.ts", "src/storage/index.ts"]
+}

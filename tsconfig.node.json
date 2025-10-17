@@ -1,0 +1,10 @@
+{
+  "extends": "./.typescript/base.json",
+  "compilerOptions": {
+    "noEmit": true,
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "types": ["node"]
+  },
+  "include": ["rsbuild.config.ts", "src/manifest/**/*.ts"]
+}

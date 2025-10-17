@@ -1,0 +1,20 @@
+{
+  "extends": "./.typescript/react.json",
+  "compilerOptions": {
+    "noEmit": true,
+    "moduleResolution": "bundler",
+    "types": ["webextension-polyfill"],
+    "paths": {
+      "src/*": ["./src/*"],
+      "store/*": ["./src/content/store/*"],
+      "ui/*": ["./src/components/ui/*"],
+      "layouts/*": ["./src/components/layouts/*"]
+    }
+  },
+  "include": [
+    "src/global.d.ts",
+    "src/components/**/*",
+    "src/content/**/*",
+    "src/types/**/*"
+  ]
+}

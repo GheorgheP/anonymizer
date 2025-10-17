@@ -1,0 +1,17 @@
+pre-push:
+  parallel: true
+  jobs:
+    - name: check types
+      run: pnpm run tscheck
+
+    - name: packages audit
+      run: pnpm audit
+
+pre-commit:
+  commands:
+    lint:
+      run: pnpm run lint --write --no-errors-on-unmatched --files-ignore-unknown=true --colors=off {staged_files}
+      stage_fixed: true
+    format:
+      run: pnpm run format --write {staged_files}
+      stage_fixed: true
